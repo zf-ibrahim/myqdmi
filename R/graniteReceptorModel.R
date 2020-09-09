@@ -312,7 +312,7 @@ totalwind <- (calmFreq(windInput, calm = F)+calmFreq(windInput, calm = T)+1)
 
 pwb <- nwb/totalwind*100
 
-aws <- mean(windInput$ws)
+aws <- mean(windInput$ws, na.rm = T)
 
 tdh <- quarryInput$drillhole
 
