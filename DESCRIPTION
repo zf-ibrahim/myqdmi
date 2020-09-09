@@ -1,9 +1,9 @@
 Package: myqdmi
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Malaysia Quarry Dust Monitoring Artificial Intelligent
 Version: 0.1.0
 Author: Dr. Izhar Abadi Ibrahim Rais & Zul Fadhli Ibrahim
-Maintainer: Zul Fadhli Ibrahim <zulfadhlif@jmg.gov.my>
+Maintainer: Zul Fadhli Ibrahim <zulfadhli@jmg.gov.my>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
 License: What license is it under?
