@@ -31,6 +31,10 @@ receptorModel.limestone <- function(sourceInput, receptorInput, windInput, sourc
   
   sourceName <- sourceActivity
   
+  sourceInput <- sourceInput
+  receptorInput <- receptorInput
+  windInput <- windInput
+  
   aws <- mean(windInput$ws, na.rm = T)
   
   wss <- aws * (receptorInput$z/anemometerHeight)
@@ -43,5 +47,3 @@ receptorModel.limestone <- function(sourceInput, receptorInput, windInput, sourc
   
   3.306 + 0.0005 * ((aba + tdh)/2) - 0.2818 * ((aws + wss)/2) + 684.95 * (1/dsr)
 }
-
-receptorModel.limestone(sourceInput, receptorInput, windInput, sourceActivity = "primaryCrusher", anemometerHeight = 16)
