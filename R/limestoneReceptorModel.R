@@ -17,6 +17,8 @@
 ##' @param sourceActivity The pointsource name such as \sQuote{primaryCrusher} or \sQuote{point A} which is
 ##' according to the \code{souceInput} \code{sourceActivity}.
 ##' 
+##' @export
+##' 
 ##' @return The results will be the estimation of dust deposited rate at all the receptors from a pointsource.
 ##' The unit measurement for dust deposited rate is ug/m2/month.
 ##' 

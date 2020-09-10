@@ -1,4 +1,5 @@
 # Granite Receptor Model
+##' @export
 
 #2.98 - 0.0123(AWS) - 0.00073(DSR) + 0.0006((ABA + TDH)/2) + 0.0089((NWB+WB)/2)
 
