@@ -1,3 +1,4 @@
+##' @export
 #Distance
 
 #x = SQRT((PcoorX-RcoorX)^2+(PcoorY-RcoorY)^2+(PcoorZ-RcoorZ)^2)

@@ -1,3 +1,4 @@
+##' @export
 # paved road
 
 # unpaved road

@@ -1,3 +1,4 @@
+##' @export
 #Bearing of receptor from point source
 #Ɵ =IF((
 #  ATAN(Jy/Jx)*180/3.142)<0,-1*(

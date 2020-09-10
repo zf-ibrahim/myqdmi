@@ -1,3 +1,4 @@
+##' @export
 #calmFreq
 
 #wind Frequency PTG(MS excel)

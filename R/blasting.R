@@ -1,3 +1,4 @@
+##' @export
 #Blasting
 
 blasting <- function(quarryInput, particleSize = "tsp", areaBlasted = quarryInput$areaBlasted,

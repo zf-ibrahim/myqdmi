@@ -1,3 +1,4 @@
+##' @export
 #screen
 
 screening <- function(quarryInput, particleSize = "tsp", QuarryProduction = quarryInput$quarryProduction,

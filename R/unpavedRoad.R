@@ -1,3 +1,4 @@
+##' @export
 # unpaved road
 
 unpavedRoad <- function(quarryInput, particleSize = "tsp",

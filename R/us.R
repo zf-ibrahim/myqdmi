@@ -1,3 +1,4 @@
+##' @export
 #halaju angin pada ketinggian sesuatu punca
 
 #Us = Ua * (PcoorZ/Za)^p

@@ -1,3 +1,4 @@
+##' @export
 #wind Frequency PTG(MS excel)
 #Malaysian quarry dust monitoring artificial intelligence android apps (MyQDMi)
 

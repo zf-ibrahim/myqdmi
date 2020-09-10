@@ -1,3 +1,4 @@
+##' @export
 #Stockpile
 
 stockpile <- function(quarryInput, particleSize = "tsp", QuarryProduction = quarryInput$quarryProduction,

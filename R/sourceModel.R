@@ -1,3 +1,4 @@
+##' @export
 #calculate all the results
 
 sourceModel <- function(quarryInput = quarryInput,

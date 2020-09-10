@@ -1,3 +1,4 @@
+##' @export
 #Drilling
 
 drilling <- function(quarryInput, particleSize = "tsp",

@@ -1,3 +1,4 @@
+##' @export
 # Dust Emission from Primary crusher
 
 
