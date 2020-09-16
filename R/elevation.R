@@ -4,19 +4,19 @@
 elevation <- function(location = receptorInput){
 
 
-x<- location$x
+x<- location$lat
 
-y<- location$y
+y<- location$long
 
 
 
 
 options(geonamesUsername="ctpp")
 
-storage.vector <- rep(NA,nrow(location))
+storage.vector <- rep(NA,NROW(location))
 for (i in 1:nrow(location)){
 
-  storage.vector[i] <- GNsrtm3(lat = location[i,"x"], location[i,"y"])
+  storage.vector[i] <- GNsrtm3(lat = location[i,"lat"], location[i,"long"])
 
 
 }

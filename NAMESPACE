@@ -3,6 +3,7 @@
 export(bearing)
 export(blasting)
 export(calmFreq)
+export(coord2utm)
 export(distance)
 export(drilling)
 export(elevation)
