@@ -11,6 +11,7 @@ distance <- function(sourceInput, receptorInput, sourceActivity = "primaryCrushe
 
   sourceInput <- sourceInput
   receptorInput <- receptorInput
+  sourceActivity <- sourceActivity
 
 
   jarak <- rep(NA,nrow(receptorInput))
