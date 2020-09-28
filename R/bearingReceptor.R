@@ -18,6 +18,11 @@
 
 
 bearing <- function(sourceInput, receptorInput, sourceActivity = "primaryCrusher"){
+  
+  sourceInput <- sourceInput
+  receptorInput <- receptorInput
+  sourceActivity <- sourceActivity
+  
 
   jx <- rep(NA,nrow(receptorInput))
   jy <- rep(NA,nrow(receptorInput))
