@@ -7,7 +7,7 @@
 #library(geosphere)
 #distm (c(lon1, lat1), c(lon2, lat2), fun = distHaversine)
 
-distance <- function(sourceInput, receptorInput, sourceActivity = "primaryCrusher"){
+distance <- function(sourceInput, receptorInput, sourceActivity ){
 
   sourceInput <- sourceInput
   receptorInput <- receptorInput

@@ -17,7 +17,7 @@
 
 
 
-bearing <- function(sourceInput, receptorInput, sourceActivity = "primaryCrusher"){
+bearing <- function(sourceInput, receptorInput, sourceActivity){
   
   sourceInput <- sourceInput
   receptorInput <- receptorInput

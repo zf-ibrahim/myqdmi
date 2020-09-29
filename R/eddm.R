@@ -1,6 +1,6 @@
 ##' @export
 
-source.model <- function(sourceInput, receptorInput, windInput, sourceActivity = "primaryCrusher", vg = 5, dustGenerated = 0.731952, AnemometerHeight = 16){
+source.model <- function(sourceInput, receptorInput, windInput, sourceActivity, vg = 5, dustGenerated = 0.731952, AnemometerHeight = 16){
 
   sourceInput <- sourceInput
   receptorInput <- receptorInput
