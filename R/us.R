@@ -9,6 +9,8 @@ us <- function(sourceInput, windInput, sourceActivity = "primaryCrusher", Anemom
   sourceInput <- sourceInput
 
   windInput <- windInput
+  
+  sourceActivity <- sourceActivity
 
   windBand <- ifelse(windInput$ws > 8.75,
                      band <- "class1",
