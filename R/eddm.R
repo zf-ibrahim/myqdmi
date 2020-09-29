@@ -10,10 +10,10 @@ source.model <- function(sourceInput, receptorInput, windInput, sourceActivity, 
   AH <- AnemometerHeight
 
   #sheet k
-  ((-1*exp(-0.12*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.14)/us(sourceInput, windInput,AnemometerHeight = AH, stability = "A", windClass = "class1")))
+  ((-1*exp(-0.12*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.14)/us(sourceInput, windInput, sourceActivity = sourceActivity, AnemometerHeight = AH, stability = "A", windClass = "class1")))
 
     #sheet k
-    *-0.12 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.14)/ us(sourceInput, windInput,AnemometerHeight = AH, stability = "A", windClass = "class1"))
+    *-0.12 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.14)/ us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "A", windClass = "class1"))
 
     #sheet L
     *(dustGenerated/(calmFreq(windInput, calm = F)+calmFreq(windInput, calm = T)+1)) * (0.14/distance(sourceInput, receptorInput, sourceActivity = sourceActivity)) * ((8 * 1000000)/(24*3.14159*distance(sourceInput, receptorInput, sourceActivity = sourceActivity)))
@@ -27,10 +27,10 @@ source.model <- function(sourceInput, receptorInput, windInput, sourceActivity, 
                                                            ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SW", windFreq(windInput, stability = "A", windClass = "class1", windDirection = "NE"),
                                                                   ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SE", windFreq(windInput, stability = "A", windClass = "class1", windDirection = "NW"),
                                                                          "error"))))))))))
-   + (-1*exp(-0.12*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.14)/us(sourceInput, windInput,AnemometerHeight = AH, stability = "A", windClass = "class2")))
+   + (-1*exp(-0.12*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.14)/us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "A", windClass = "class2")))
 
       #sheet k
-      *-0.12 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.14)/ us(sourceInput, windInput,AnemometerHeight = AH, stability = "A", windClass = "class2"))
+      *-0.12 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.14)/ us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "A", windClass = "class2"))
 
       #sheet L
       *(dustGenerated/(calmFreq(windInput, calm = F)+calmFreq(windInput, calm = T)+1)) * (0.14/distance(sourceInput, receptorInput, sourceActivity = sourceActivity)) * ((8 * 1000000)/(24*3.14159*distance(sourceInput, receptorInput, sourceActivity = sourceActivity)))
@@ -44,10 +44,10 @@ source.model <- function(sourceInput, receptorInput, windInput, sourceActivity, 
                                                              ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SW", windFreq(windInput, stability = "A", windClass = "class2", windDirection = "NE"),
                                                                     ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SE", windFreq(windInput, stability = "A", windClass = "class2", windDirection = "NW"),
                                                                            "error"))))))))))
-   +(-1*exp(-0.12*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.14)/us(sourceInput, windInput,AnemometerHeight = AH, stability = "A", windClass = "class3")))
+   +(-1*exp(-0.12*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.14)/us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "A", windClass = "class3")))
 
      #sheet k
-     *-0.12 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.14)/ us(sourceInput, windInput,AnemometerHeight = AH, stability = "A", windClass = "class3"))
+     *-0.12 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.14)/ us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "A", windClass = "class3"))
 
      #sheet L
      *(dustGenerated/(calmFreq(windInput, calm = F)+calmFreq(windInput, calm = T)+1)) * (0.14/distance(sourceInput, receptorInput, sourceActivity = sourceActivity)) * ((8 * 1000000)/(24*3.14159*distance(sourceInput, receptorInput, sourceActivity = sourceActivity)))
@@ -61,10 +61,10 @@ source.model <- function(sourceInput, receptorInput, windInput, sourceActivity, 
                                                             ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SW", windFreq(windInput, stability = "A", windClass = "class3", windDirection = "NE"),
                                                                    ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SE", windFreq(windInput, stability = "A", windClass = "class3", windDirection = "NW"),
                                                                           "error"))))))))))
-   + (-1*exp(-0.12*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.14)/us(sourceInput, windInput,AnemometerHeight = AH, stability = "A", windClass = "class4")))
+   + (-1*exp(-0.12*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.14)/us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "A", windClass = "class4")))
 
       #sheet k
-      *-0.12 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.14)/ us(sourceInput, windInput,AnemometerHeight = AH, stability = "A", windClass = "class4"))
+      *-0.12 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.14)/ us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "A", windClass = "class4"))
 
       #sheet L
       *(dustGenerated/(calmFreq(windInput, calm = F)+calmFreq(windInput, calm = T)+1)) * (0.14/distance(sourceInput, receptorInput, sourceActivity = sourceActivity)) * ((8 * 1000000)/(24*3.14159*distance(sourceInput, receptorInput, sourceActivity = sourceActivity)))
@@ -79,10 +79,10 @@ source.model <- function(sourceInput, receptorInput, windInput, sourceActivity, 
                                                                     ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SE", windFreq(windInput, stability = "A", windClass = "class4", windDirection = "NW"),
                                                                            "error"))))))))))
    ###################### B
-   + (-1*exp(-0.135*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.15)/us(sourceInput, windInput,AnemometerHeight = AH, stability = "B", windClass = "class1")))
+   + (-1*exp(-0.135*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.15)/us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "B", windClass = "class1")))
 
       #sheet k
-      *-0.135 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.15)/ us(sourceInput, windInput,AnemometerHeight = AH, stability = "B", windClass = "class1"))
+      *-0.135 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.15)/ us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "B", windClass = "class1"))
 
       #sheet L
       *(dustGenerated/(calmFreq(windInput, calm = F)+calmFreq(windInput, calm = T)+1)) * (0.15/distance(sourceInput, receptorInput, sourceActivity = sourceActivity)) * ((8 * 1000000)/(24*3.14159*distance(sourceInput, receptorInput, sourceActivity = sourceActivity)))
@@ -96,10 +96,10 @@ source.model <- function(sourceInput, receptorInput, windInput, sourceActivity, 
                                                              ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SW", windFreq(windInput, stability = "B", windClass = "class1", windDirection = "NE"),
                                                                     ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SE", windFreq(windInput, stability = "B", windClass = "class1", windDirection = "NW"),
                                                                            "error"))))))))))
-   + (-1*exp(-0.135*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.15)/us(sourceInput, windInput,AnemometerHeight = AH, stability = "B", windClass = "class2")))
+   + (-1*exp(-0.135*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.15)/us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "B", windClass = "class2")))
 
       #sheet k
-      *-0.135 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.15)/ us(sourceInput, windInput,AnemometerHeight = AH, stability = "B", windClass = "class2"))
+      *-0.135 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.15)/ us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "B", windClass = "class2"))
 
       #sheet L
       *(dustGenerated/(calmFreq(windInput, calm = F)+calmFreq(windInput, calm = T)+1)) * (0.15/distance(sourceInput, receptorInput, sourceActivity = sourceActivity)) * ((8 * 1000000)/(24*3.14159*distance(sourceInput, receptorInput, sourceActivity = sourceActivity)))
@@ -113,10 +113,10 @@ source.model <- function(sourceInput, receptorInput, windInput, sourceActivity, 
                                                              ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SW", windFreq(windInput, stability = "B", windClass = "class2", windDirection = "NE"),
                                                                     ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SE", windFreq(windInput, stability = "B", windClass = "class2", windDirection = "NW"),
                                                                            "error"))))))))))
-   +(-1*exp(-0.135*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.15)/us(sourceInput, windInput,AnemometerHeight = AH, stability = "B", windClass = "class3")))
+   +(-1*exp(-0.135*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.15)/us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "B", windClass = "class3")))
 
      #sheet k
-     *-0.135 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.15)/ us(sourceInput, windInput,AnemometerHeight = AH, stability = "B", windClass = "class3"))
+     *-0.135 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.15)/ us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "B", windClass = "class3"))
 
      #sheet L
      *(dustGenerated/(calmFreq(windInput, calm = F)+calmFreq(windInput, calm = T)+1)) * (0.15/distance(sourceInput, receptorInput, sourceActivity = sourceActivity)) * ((8 * 1000000)/(24*3.14159*distance(sourceInput, receptorInput, sourceActivity = sourceActivity)))
@@ -130,10 +130,10 @@ source.model <- function(sourceInput, receptorInput, windInput, sourceActivity, 
                                                             ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SW", windFreq(windInput, stability = "B", windClass = "class3", windDirection = "NE"),
                                                                    ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SE", windFreq(windInput, stability = "B", windClass = "class3", windDirection = "NW"),
                                                                           "error"))))))))))
-   + (-1*exp(-0.135*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.15)/us(sourceInput, windInput,AnemometerHeight = AH, stability = "B", windClass = "class4")))
+   + (-1*exp(-0.135*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.15)/us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "B", windClass = "class4")))
 
       #sheet k
-      *-0.135 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.15)/ us(sourceInput, windInput,AnemometerHeight = AH, stability = "B", windClass = "class4"))
+      *-0.135 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.15)/ us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "B", windClass = "class4"))
 
       #sheet L
       *(dustGenerated/(calmFreq(windInput, calm = F)+calmFreq(windInput, calm = T)+1)) * (0.15/distance(sourceInput, receptorInput, sourceActivity = sourceActivity)) * ((8 * 1000000)/(24*3.14159*distance(sourceInput, receptorInput, sourceActivity = sourceActivity)))
@@ -148,10 +148,10 @@ source.model <- function(sourceInput, receptorInput, windInput, sourceActivity, 
                                                                     ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SE", windFreq(windInput, stability = "B", windClass = "class4", windDirection = "NW"),
                                                                            "error"))))))))))
    #############C
-   +(-1*exp(-0.183*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.18)/us(sourceInput, windInput,AnemometerHeight = AH, stability = "C", windClass = "class1")))
+   +(-1*exp(-0.183*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.18)/us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "C", windClass = "class1")))
 
      #sheet k
-     *-0.183 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.18)/ us(sourceInput, windInput,AnemometerHeight = AH, stability = "C", windClass = "class1"))
+     *-0.183 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.18)/ us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "C", windClass = "class1"))
 
      #sheet L
      *(dustGenerated/(calmFreq(windInput, calm = F)+calmFreq(windInput, calm = T)+1)) * (0.18/distance(sourceInput, receptorInput, sourceActivity = sourceActivity)) * ((8 * 1000000)/(24*3.14159*distance(sourceInput, receptorInput, sourceActivity = sourceActivity)))
@@ -165,10 +165,10 @@ source.model <- function(sourceInput, receptorInput, windInput, sourceActivity, 
                                                             ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SW", windFreq(windInput, stability = "C", windClass = "class1", windDirection = "NE"),
                                                                    ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SE", windFreq(windInput, stability = "C", windClass = "class1", windDirection = "NW"),
                                                                           "error"))))))))))
-   + (-1*exp(-0.183*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.18)/us(sourceInput, windInput,AnemometerHeight = AH, stability = "C", windClass = "class2")))
+   + (-1*exp(-0.183*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.18)/us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "C", windClass = "class2")))
 
       #sheet k
-      *-0.183 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.18)/ us(sourceInput, windInput,AnemometerHeight = AH, stability = "C", windClass = "class2"))
+      *-0.183 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.18)/ us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "C", windClass = "class2"))
 
       #sheet L
       *(dustGenerated/(calmFreq(windInput, calm = F)+calmFreq(windInput, calm = T)+1)) * (0.18/distance(sourceInput, receptorInput, sourceActivity = sourceActivity)) * ((8 * 1000000)/(24*3.14159*distance(sourceInput, receptorInput, sourceActivity = sourceActivity)))
@@ -182,10 +182,10 @@ source.model <- function(sourceInput, receptorInput, windInput, sourceActivity, 
                                                              ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SW", windFreq(windInput, stability = "C", windClass = "class2", windDirection = "NE"),
                                                                     ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SE", windFreq(windInput, stability = "C", windClass = "class2", windDirection = "NW"),
                                                                            "error"))))))))))
-   +(-1*exp(-0.183*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.18)/us(sourceInput, windInput,AnemometerHeight = AH, stability = "C", windClass = "class3")))
+   +(-1*exp(-0.183*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.18)/us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "C", windClass = "class3")))
 
      #sheet k
-     *-0.183 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.18)/ us(sourceInput, windInput,AnemometerHeight = AH, stability = "C", windClass = "class3"))
+     *-0.183 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.18)/ us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "C", windClass = "class3"))
 
      #sheet L
      *(dustGenerated/(calmFreq(windInput, calm = F)+calmFreq(windInput, calm = T)+1)) * (0.18/distance(sourceInput, receptorInput, sourceActivity = sourceActivity)) * ((8 * 1000000)/(24*3.14159*distance(sourceInput, receptorInput, sourceActivity = sourceActivity)))
@@ -199,10 +199,10 @@ source.model <- function(sourceInput, receptorInput, windInput, sourceActivity, 
                                                             ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SW", windFreq(windInput, stability = "C", windClass = "class3", windDirection = "NE"),
                                                                    ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SE", windFreq(windInput, stability = "C", windClass = "class3", windDirection = "NW"),
                                                                           "error"))))))))))
-   + (-1*exp(-0.183*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.18)/us(sourceInput, windInput,AnemometerHeight = AH, stability = "C", windClass = "class4")))
+   + (-1*exp(-0.183*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.18)/us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "C", windClass = "class4")))
 
       #sheet k
-      *-0.183 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.18)/ us(sourceInput, windInput,AnemometerHeight = AH, stability = "C", windClass = "class4"))
+      *-0.183 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.18)/ us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "C", windClass = "class4"))
 
       #sheet L
       *(dustGenerated/(calmFreq(windInput, calm = F)+calmFreq(windInput, calm = T)+1)) * (0.18/distance(sourceInput, receptorInput, sourceActivity = sourceActivity)) * ((8 * 1000000)/(24*3.14159*distance(sourceInput, receptorInput, sourceActivity = sourceActivity)))
@@ -217,10 +217,10 @@ source.model <- function(sourceInput, receptorInput, windInput, sourceActivity, 
                                                                     ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SE", windFreq(windInput, stability = "C", windClass = "class4", windDirection = "NW"),
                                                                            "error"))))))))))
    ########## D
-   +(-1*exp(-0.115*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.3)/us(sourceInput, windInput,AnemometerHeight = AH, stability = "D", windClass = "class1")))
+   +(-1*exp(-0.115*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.3)/us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "D", windClass = "class1")))
 
      #sheet k
-     *-0.115 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.3)/ us(sourceInput, windInput,AnemometerHeight = AH, stability = "D", windClass = "class1"))
+     *-0.115 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.3)/ us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "D", windClass = "class1"))
 
      #sheet L
      *(dustGenerated/(calmFreq(windInput, calm = F)+calmFreq(windInput, calm = T)+1)) * (0.3/distance(sourceInput, receptorInput, sourceActivity = sourceActivity)) * ((8 * 1000000)/(24*3.14159*distance(sourceInput, receptorInput, sourceActivity = sourceActivity)))
@@ -234,10 +234,10 @@ source.model <- function(sourceInput, receptorInput, windInput, sourceActivity, 
                                                             ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SW", windFreq(windInput, stability = "D", windClass = "class1", windDirection = "NE"),
                                                                    ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SE", windFreq(windInput, stability = "D", windClass = "class1", windDirection = "NW"),
                                                                           "error"))))))))))
-   + (-1*exp(-0.115*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.3)/us(sourceInput, windInput,AnemometerHeight = AH, stability = "D", windClass = "class2")))
+   + (-1*exp(-0.115*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.3)/us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "D", windClass = "class2")))
 
       #sheet k
-      *-0.115 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.3)/ us(sourceInput, windInput,AnemometerHeight = AH, stability = "D", windClass = "class2"))
+      *-0.115 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.3)/ us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "D", windClass = "class2"))
 
       #sheet L
       *(dustGenerated/(calmFreq(windInput, calm = F)+calmFreq(windInput, calm = T)+1)) * (0.3/distance(sourceInput, receptorInput, sourceActivity = sourceActivity)) * ((8 * 1000000)/(24*3.14159*distance(sourceInput, receptorInput, sourceActivity = sourceActivity)))
@@ -251,10 +251,10 @@ source.model <- function(sourceInput, receptorInput, windInput, sourceActivity, 
                                                              ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SW", windFreq(windInput, stability = "D", windClass = "class2", windDirection = "NE"),
                                                                     ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SE", windFreq(windInput, stability = "D", windClass = "class2", windDirection = "NW"),
                                                                            "error"))))))))))
-   +(-1*exp(-0.115*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.3)/us(sourceInput, windInput,AnemometerHeight = AH, stability = "D", windClass = "class3")))
+   +(-1*exp(-0.115*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.3)/us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "D", windClass = "class3")))
 
      #sheet k
-     *-0.115 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.3)/ us(sourceInput, windInput,AnemometerHeight = AH, stability = "D", windClass = "class3"))
+     *-0.115 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.3)/ us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "D", windClass = "class3"))
 
      #sheet L
      *(dustGenerated/(calmFreq(windInput, calm = F)+calmFreq(windInput, calm = T)+1)) * (0.3/distance(sourceInput, receptorInput, sourceActivity = sourceActivity)) * ((8 * 1000000)/(24*3.14159*distance(sourceInput, receptorInput, sourceActivity = sourceActivity)))
@@ -268,10 +268,10 @@ source.model <- function(sourceInput, receptorInput, windInput, sourceActivity, 
                                                             ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SW", windFreq(windInput, stability = "D", windClass = "class3", windDirection = "NE"),
                                                                    ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SE", windFreq(windInput, stability = "D", windClass = "class3", windDirection = "NW"),
                                                                           "error"))))))))))
-   + (-1*exp(-0.115*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.3)/us(sourceInput, windInput,AnemometerHeight = AH, stability = "D", windClass = "class4")))
+   + (-1*exp(-0.115*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.3)/us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "D", windClass = "class4")))
 
       #sheet k
-      *-0.115 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.3)/ us(sourceInput, windInput,AnemometerHeight = AH, stability = "D", windClass = "class4"))
+      *-0.115 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.3)/ us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "D", windClass = "class4"))
 
       #sheet L
       *(dustGenerated/(calmFreq(windInput, calm = F)+calmFreq(windInput, calm = T)+1)) * (0.3/distance(sourceInput, receptorInput, sourceActivity = sourceActivity)) * ((8 * 1000000)/(24*3.14159*distance(sourceInput, receptorInput, sourceActivity = sourceActivity)))
@@ -286,10 +286,10 @@ source.model <- function(sourceInput, receptorInput, windInput, sourceActivity, 
                                                                     ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SE", windFreq(windInput, stability = "D", windClass = "class4", windDirection = "NW"),
                                                                            "error"))))))))))
    ###########E
-   +(-1*exp(-0.16*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.3)/us(sourceInput, windInput,AnemometerHeight = AH, stability = "E", windClass = "class1")))
+   +(-1*exp(-0.16*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.3)/us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "E", windClass = "class1")))
 
      #sheet k
-     *-0.16 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.3)/ us(sourceInput, windInput,AnemometerHeight = AH, stability = "E", windClass = "class1"))
+     *-0.16 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.3)/ us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "E", windClass = "class1"))
 
      #sheet L
      *(dustGenerated/(calmFreq(windInput, calm = F)+calmFreq(windInput, calm = T)+1)) * (0.3/distance(sourceInput, receptorInput, sourceActivity = sourceActivity)) * ((8 * 1000000)/(24*3.14159*distance(sourceInput, receptorInput, sourceActivity = sourceActivity)))
@@ -303,10 +303,10 @@ source.model <- function(sourceInput, receptorInput, windInput, sourceActivity, 
                                                             ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SW", windFreq(windInput, stability = "E", windClass = "class1", windDirection = "NE"),
                                                                    ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SE", windFreq(windInput, stability = "E", windClass = "class1", windDirection = "NW"),
                                                                           "error"))))))))))
-   + (-1*exp(-0.16*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.3)/us(sourceInput, windInput,AnemometerHeight = AH, stability = "E", windClass = "class2")))
+   + (-1*exp(-0.16*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.3)/us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "E", windClass = "class2")))
 
       #sheet k
-      *-0.16 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.3)/ us(sourceInput, windInput,AnemometerHeight = AH, stability = "E", windClass = "class2"))
+      *-0.16 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.3)/ us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "E", windClass = "class2"))
 
       #sheet L
       *(dustGenerated/(calmFreq(windInput, calm = F)+calmFreq(windInput, calm = T)+1)) * (0.3/distance(sourceInput, receptorInput, sourceActivity = sourceActivity)) * ((8 * 1000000)/(24*3.14159*distance(sourceInput, receptorInput, sourceActivity = sourceActivity)))
@@ -320,10 +320,10 @@ source.model <- function(sourceInput, receptorInput, windInput, sourceActivity, 
                                                              ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SW", windFreq(windInput, stability = "E", windClass = "class2", windDirection = "NE"),
                                                                     ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SE", windFreq(windInput, stability = "E", windClass = "class2", windDirection = "NW"),
                                                                            "error"))))))))))
-   +(-1*exp(-0.16*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.3)/us(sourceInput, windInput,AnemometerHeight = AH, stability = "E", windClass = "class3")))
+   +(-1*exp(-0.16*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.3)/us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "E", windClass = "class3")))
 
      #sheet k
-     *-0.16 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.3)/ us(sourceInput, windInput,AnemometerHeight = AH, stability = "E", windClass = "class3"))
+     *-0.16 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.3)/ us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "E", windClass = "class3"))
 
      #sheet L
      *(dustGenerated/(calmFreq(windInput, calm = F)+calmFreq(windInput, calm = T)+1)) * (0.3/distance(sourceInput, receptorInput, sourceActivity = sourceActivity)) * ((8 * 1000000)/(24*3.14159*distance(sourceInput, receptorInput, sourceActivity = sourceActivity)))
@@ -337,10 +337,10 @@ source.model <- function(sourceInput, receptorInput, windInput, sourceActivity, 
                                                             ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SW", windFreq(windInput, stability = "E", windClass = "class3", windDirection = "NE"),
                                                                    ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SE", windFreq(windInput, stability = "E", windClass = "class3", windDirection = "NW"),
                                                                           "error"))))))))))
-   + (-1*exp(-0.16*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.3)/us(sourceInput, windInput,AnemometerHeight = AH, stability = "E", windClass = "class4")))
+   + (-1*exp(-0.16*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.3)/us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "E", windClass = "class4")))
 
       #sheet k
-      *-0.16 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.3)/ us(sourceInput, windInput,AnemometerHeight = AH, stability = "E", windClass = "class4"))
+      *-0.16 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.3)/ us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "E", windClass = "class4"))
 
       #sheet L
       *(dustGenerated/(calmFreq(windInput, calm = F)+calmFreq(windInput, calm = T)+1)) * (0.3/distance(sourceInput, receptorInput, sourceActivity = sourceActivity)) * ((8 * 1000000)/(24*3.14159*distance(sourceInput, receptorInput, sourceActivity = sourceActivity)))
@@ -355,10 +355,10 @@ source.model <- function(sourceInput, receptorInput, windInput, sourceActivity, 
                                                                     ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SE", windFreq(windInput, stability = "E", windClass = "class4", windDirection = "NW"),
                                                                            "error"))))))))))
    ###########F
-   +(-1*exp(-0.114*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.4)/us(sourceInput, windInput,AnemometerHeight = AH, stability = "F", windClass = "class1")))
+   +(-1*exp(-0.114*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.4)/us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "F", windClass = "class1")))
 
      #sheet k
-     *-0.114 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.4)/ us(sourceInput, windInput,AnemometerHeight = AH, stability = "F", windClass = "class1"))
+     *-0.114 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.4)/ us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "F", windClass = "class1"))
 
      #sheet L
      *(dustGenerated/(calmFreq(windInput, calm = F)+calmFreq(windInput, calm = T)+1)) * (0.4/distance(sourceInput, receptorInput, sourceActivity = sourceActivity)) * ((8 * 1000000)/(24*3.14159*distance(sourceInput, receptorInput, sourceActivity = sourceActivity)))
@@ -372,10 +372,10 @@ source.model <- function(sourceInput, receptorInput, windInput, sourceActivity, 
                                                             ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SW", windFreq(windInput, stability = "F", windClass = "class1", windDirection = "NE"),
                                                                    ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SE", windFreq(windInput, stability = "F", windClass = "class1", windDirection = "NW"),
                                                                           "error"))))))))))
-   + (-1*exp(-0.114*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.4)/us(sourceInput, windInput,AnemometerHeight = AH, stability = "F", windClass = "class2")))
+   + (-1*exp(-0.114*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.4)/us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "F", windClass = "class2")))
 
       #sheet k
-      *-0.114 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.4)/ us(sourceInput, windInput,AnemometerHeight = AH, stability = "F", windClass = "class2"))
+      *-0.114 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.4)/ us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "F", windClass = "class2"))
 
       #sheet L
       *(dustGenerated/(calmFreq(windInput, calm = F)+calmFreq(windInput, calm = T)+1)) * (0.4/distance(sourceInput, receptorInput, sourceActivity = sourceActivity)) * ((8 * 1000000)/(24*3.14159*distance(sourceInput, receptorInput, sourceActivity = sourceActivity)))
@@ -389,10 +389,10 @@ source.model <- function(sourceInput, receptorInput, windInput, sourceActivity, 
                                                              ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SW", windFreq(windInput, stability = "F", windClass = "class2", windDirection = "NE"),
                                                                     ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SE", windFreq(windInput, stability = "F", windClass = "class2", windDirection = "NW"),
                                                                            "error"))))))))))
-   +(-1*exp(-0.114*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.4)/us(sourceInput, windInput,AnemometerHeight = AH, stability = "F", windClass = "class3")))
+   +(-1*exp(-0.114*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.4)/us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "F", windClass = "class3")))
 
      #sheet k
-     *-0.114 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.4)/ us(sourceInput, windInput,AnemometerHeight = AH, stability = "F", windClass = "class3"))
+     *-0.114 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.4)/ us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "F", windClass = "class3"))
 
      #sheet L
      *(dustGenerated/(calmFreq(windInput, calm = F)+calmFreq(windInput, calm = T)+1)) * (0.4/distance(sourceInput, receptorInput, sourceActivity = sourceActivity)) * ((8 * 1000000)/(24*3.14159*distance(sourceInput, receptorInput, sourceActivity = sourceActivity)))
@@ -406,10 +406,10 @@ source.model <- function(sourceInput, receptorInput, windInput, sourceActivity, 
                                                             ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SW", windFreq(windInput, stability = "F", windClass = "class3", windDirection = "NE"),
                                                                    ifelse(bearing(sourceInput, receptorInput, sourceActivity = sourceActivity) == "SE", windFreq(windInput, stability = "F", windClass = "class3", windDirection = "NW"),
                                                                           "error"))))))))))
-   + (-1*exp(-0.114*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.4)/us(sourceInput, windInput,AnemometerHeight = AH, stability = "F", windClass = "class4")))
+   + (-1*exp(-0.114*(vg)*((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.4)/us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "F", windClass = "class4")))
 
       #sheet k
-      *-0.114 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.4)/ us(sourceInput, windInput,AnemometerHeight = AH, stability = "F", windClass = "class4"))
+      *-0.114 * (vg) * ((distance(sourceInput, receptorInput, sourceActivity = sourceActivity)^0.4)/ us(sourceInput, windInput, sourceActivity = sourceActivity,AnemometerHeight = AH, stability = "F", windClass = "class4"))
 
       #sheet L
       *(dustGenerated/(calmFreq(windInput, calm = F)+calmFreq(windInput, calm = T)+1)) * (0.4/distance(sourceInput, receptorInput, sourceActivity = sourceActivity)) * ((8 * 1000000)/(24*3.14159*distance(sourceInput, receptorInput, sourceActivity = sourceActivity)))
