@@ -43,5 +43,5 @@ receptorModel.limestone(sourceInput, receptorInput, windInput, sourceActivity = 
 
 }
 \author{
-Zul Fadhli & Izhar Abadi
+Zul Fadhli & Dr. Izhar Abadi
 }

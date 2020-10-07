@@ -2,8 +2,7 @@
 % Please edit documentation in R/sourceModel.R
 \name{sourceModel}
 \alias{sourceModel}
-\title{Application of Source model for dust deposited rate estimation to all receptor and source locations
-Function for Source Model}
+\title{Application of Source model for dust deposited rate estimation to all receptor and source locations}
 \usage{
 sourceModel(
   quarryInput = quarryInput,
@@ -43,5 +42,5 @@ if the \code{sourceInput} is the quarries location, the \code{sourceActivity} is
 sourceModel((quarryInput = quarryInput, sourceInput = sourceInput, receptorInput = receptorInput, windInput = windInput, particleSize = "tsp")
 }
 \author{
-Zul Fadhli & Izhar Abadi
+Zul Fadhli & Dr. Izhar Abadi
 }

@@ -21,7 +21,7 @@
 ##' 
 ##' @author Zul Fadhli & Dr. Izhar Abadi
 ##' 
-##' @example 
+##' @examples  
 ##' #demo
 ##' unpavedRoad <- function(quarryInput, particleSize = "tsp", vehicleWeight = 10)
 

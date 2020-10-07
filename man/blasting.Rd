@@ -35,9 +35,12 @@ and other available particle size is "pm10" for particulate matter <10 micron.}
 A numeric value of estimation dust generation/\code{dustGenerated} for blasting activity.
 }
 \description{
-Blasting
+A function to estimate dust generation from blasting activity.
 }
 \examples{
 #demo
 blasting(quarryInput, particleSize = "tsp")
+}
+\author{
+Zul Fadhli & Dr Izhar Abadi
 }

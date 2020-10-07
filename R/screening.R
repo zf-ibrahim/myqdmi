@@ -16,10 +16,9 @@
 ##' 
 ##' @author Zul Fadhli & Dr. Izhar Abadi
 ##' 
-##' @example 
+##' @examples 
 ##' #demo
-##' screening(quarryInput, particleSize = "tsp", QuarryProduction = quarryInput$quarryProduction,
-##'                           totalScreen = quarryInput$nScreen)
+##' screening(quarryInput, particleSize = "tsp", QuarryProduction = quarryInput$quarryProduction, totalScreen = quarryInput$nScreen)
 ##' 
 screening <- function(quarryInput, particleSize = "tsp", QuarryProduction = quarryInput$quarryProduction,
                       totalScreen = quarryInput$nScreen)

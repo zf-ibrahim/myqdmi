@@ -16,8 +16,10 @@
 ##' 
 ##' @author Zul Fadhli & Dr. Izhar Abadi
 ##' 
-##' @example primaryCrusher(quarryInput, particleSize = "tsp", QuarryProduction = quarryInput$quarryProduction,
-##'                         crusherCount = quarryInput$nPrimary)
+##' @examples 
+##' 
+##' #demo
+##' primaryCrusher(quarryInput, particleSize = "tsp", QuarryProduction = quarryInput$quarryProduction, crusherCount = quarryInput$nPrimary)
 
 
 

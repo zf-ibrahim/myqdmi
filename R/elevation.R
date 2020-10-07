@@ -8,7 +8,7 @@
 ##' 
 ##' @author Zul Fadhli & Dr Izhar Abadi
 ##' 
-##' @example 
+##' @examples 
 ##' #demo
 ##' elevation(location = receptorInput) 
 

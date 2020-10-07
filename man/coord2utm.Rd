@@ -6,6 +6,17 @@
 \usage{
 coord2utm(location = sourceInput)
 }
+\arguments{
+\item{location}{A data frame must contain column of "lat" for latitude and "long" for longitude. Value format in decimal.}
+}
 \description{
-coordiante to UTM format
+\code{coord2utm} Converting lat long into Northing and Easting. Using epsg 3375 GDM2000 (Malaysia) for map projection and datum transformation
+}
+\examples{
+ 
+#demo
+coord2utm(location = sourceInput)
+}
+\author{
+Zul Fadhli & Dr Izhar Abadi
 }

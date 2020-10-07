@@ -11,7 +11,7 @@
 ##' 
 ##' @author Zul Fadhli & Dr. Izhar Abadi
 ##' 
-##' @example 
+##' @examples  
 ##' #demo
 ##' windAvg(windInput, stability = "F")
 

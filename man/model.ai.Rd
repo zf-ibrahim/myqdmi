@@ -2,8 +2,7 @@
 % Please edit documentation in R/aiModel.R
 \name{model.ai}
 \alias{model.ai}
-\title{BRT model for DDR
-Function for Limestone Receptor Model}
+\title{Artificial Intelligent modeling for estimating dust deposited rate}
 \usage{
 model.ai(
   quarryInput,
@@ -44,5 +43,5 @@ model.ai(sourceInput, receptorInput, windInput, sourceActivity = "primaryCrusher
 
 }
 \author{
-Zul Fadhli & Izhar Abadi
+Zul Fadhli & Dr Izhar Abadi
 }

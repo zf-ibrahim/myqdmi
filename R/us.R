@@ -23,7 +23,7 @@
 ##' 
 ##' @author Zul Fadhli & Dr. Izhar Abadi
 ##' 
-##' @example 
+##' @examples 
 ##' #demo
 ##' us <- function(sourceInput, windInput, sourceActivity = "primaryCrusher", AnemometerHeight = 2, stability = "A", windClass = "class1")
 

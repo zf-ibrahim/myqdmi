@@ -16,7 +16,7 @@
 ##' 
 ##' @author Zul Fadhli & Dr. Izhar Abadi
 ##' 
-##' @example
+##' @examples
 ##' #demo
 ##' stockpile <- function(quarryInput, particleSize = "tsp")
 

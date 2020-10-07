@@ -8,7 +8,7 @@
 ##' 
 ##' @author Zul Fadhli & Dr Izhar Abadi
 ##' 
-##' @example 
+##' @examples  
 ##' #demo
 ##' coord2utm(location = sourceInput)
 

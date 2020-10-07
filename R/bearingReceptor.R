@@ -1,9 +1,7 @@
 ##' Bearing of receptor from point source
 ##' 
 ##' 
-##' 
-##'
-##' \code{bearing} A function to determine the direction of receptor location to source location
+##' \code{bearing} A function to determine the direction of receptor location to source location.
 ##' 
 ##' \code{bearing} require the source and receptor location in Easting and Northing format.
 ##' The \code{sourceActivity} for this model is the type of material processing activity in the quarry or
@@ -25,11 +23,10 @@
 ##' @author Zul Fadhli & Dr Izhar Abadi
 ##' 
 ##' @examples 
-##' 
 ##' #demo
-##' bearing(sourceInput = sourceInput, receptorInput = receptorInput, windInput = windInput, sourceActivity = "primaryCrusher")
+##' bearing(sourceInput = sourceInput, receptorInput = receptorInput, sourceActivity = "primaryCrusher")
 ##' 
-bearing <- function(sourceInput, receptorInput, sourceActivity){
+bearing <- function(sourceInput, receptorInput, sourceActivity = "primaryCrusher"){
   
   sourceInput <- sourceInput
   receptorInput <- receptorInput

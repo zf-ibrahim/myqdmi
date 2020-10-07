@@ -3,8 +3,7 @@
 \name{receptorModel.granite}
 \alias{receptorModel.granite}
 \title{Granite Receptor Model
-multivariate equation for granite model
-2.98 - 0.0123(AWS) - 0.00073(DSR) + 0.0006((ABA + TDH)/2) + 0.0089((NWB+WB)/2)}
+multivariate equation for granite model}
 \usage{
 receptorModel.granite(
   sourceInput,
@@ -44,5 +43,5 @@ receptorModel.granite(sourceInput, receptorInput, windInput, sourceActivity = "p
 
 }
 \author{
-Zul Fadhli & Izhar Abadi
+Zul Fadhli & Dr. Izhar Abadi
 }

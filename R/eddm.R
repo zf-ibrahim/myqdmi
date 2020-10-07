@@ -1,5 +1,5 @@
 ##' Source model for dust deposited rate estimation
-##' Function for Source Model
+##' 
 ##'
 ##' \code{source.model} Estimation of Dust Deposition Model (EDDM) established to estimate dust deposited rate at receptor
 ##' 

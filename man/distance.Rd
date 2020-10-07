@@ -19,9 +19,12 @@ distance(sourceInput, receptorInput, sourceActivity)
 distance between receptor location to source location
 }
 \description{
-Distance
+A function to calculate distance between receptor point to source location.
 }
 \examples{
 #demo
 distance(sourceInput, receptorInput, sourceActivity)
+}
+\author{
+Zul Fadhli & Dr Izhar Abadi
 }

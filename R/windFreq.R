@@ -12,7 +12,7 @@
 ##' 
 ##' @author Zul fadhli & Dr. Izhar Abadi
 ##' 
-##' @example 
+##' @examples
 ##' #demo
 ##' windFreq(windInput, stability = "F", windClass = "class1", windDirection = "NE")
 

@@ -2,8 +2,7 @@
 % Please edit documentation in R/eddm.R
 \name{source.model}
 \alias{source.model}
-\title{Source model for dust deposited rate estimation
-Function for Source Model}
+\title{Source model for dust deposited rate estimation}
 \usage{
 source.model(
   sourceInput,
@@ -53,5 +52,5 @@ if the \code{sourceInput} is the quarries location, the \code{sourceActivity} is
 source.model(sourceInput, receptorInput, windInput, sourceActivity = "primaryCrusher", vg = 5, dustGenerated = 0.731952, AnemometerHeight = 16)
 }
 \author{
-Zul Fadhli & Izhar Abadi
+Zul Fadhli & Dr Izhar Abadi
 }
