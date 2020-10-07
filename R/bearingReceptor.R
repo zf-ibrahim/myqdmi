@@ -1,22 +1,48 @@
+##' Bearing of receptor from point source
+##' 
+##' Ɵ =IF((
+##'   ATAN(Jy/Jx)*180/3.142)<0,-1*(
+##'     ATAN(Jy/Jx)*180/3.142),(
+##'      ATAN(Jy/Jx)*180/3.142))
+##'      
+##'      
+##' C = IF(AND(AND(Jx<0,Jy<0),AND(Ɵ>0,Ɵ<90)),"NE",
+##' IF(OR(AND(Jx>0,Jy<0),AND(Ɵ>90,Ɵ<180)),"NW",
+##' IF(AND(AND(Jx>0,Jy>0),AND(Ɵ>0,Ɵ<90)),"SW",
+##' IF(AND(AND(Jx<0,Jy>0),AND(Ɵ>0,Ɵ<90)),"SE",
+##' IF(OR(Ɵ=0,Ɵ=360),"E",
+##' IF(Ɵ=90,"N",
+##' IF(Ɵ=180,"W",
+##' IF(Ɵ=270,"S","FALSE"))))))))
+##' 
+##' 
+##'
+##' \code{bearing} A function to determine the direction of receptor location to source location
+##' 
+##' \code{bearing} require the source and receptor location in Easting and Northing format.
+##' The \code{sourceActivity} for this model is the type of material processing activity in the quarry or
+##' if the \code{sourceInput} is the quarries location, the \code{sourceActivity} is the name of the quarries.
+##' 
+##' @param sourceInput A data frame containing \code{sourceActivity} is a name for the pointsource, \code{type} (the type of material processing),
+##' \code{x} for Easting, \code{y} for Northing and \code{z} for elevation height of the location.
+##' 
+##' @param receptorInput A data frame containing \code{receptor} the name/label for receptor point,
+##' \code{x} for Easting, \code{y} for Northing and \code{z} for elevation height of the location.
+##' 
+##' @param sourceActivity The pointsource name such as \sQuote{primaryCrusher} or \sQuote{point A} which is
+##' according to the \code{souceInput} \code{sourceActivity}.
+##' 
 ##' @export
-#Bearing of receptor from point source
-#Ɵ =IF((
-#  ATAN(Jy/Jx)*180/3.142)<0,-1*(
-#    ATAN(Jy/Jx)*180/3.142),(
-#     ATAN(Jy/Jx)*180/3.142))
-
-
-#C = IF(AND(AND(Jx<0,Jy<0),AND(Ɵ>0,Ɵ<90)),"NE",
-#IF(OR(AND(Jx>0,Jy<0),AND(Ɵ>90,Ɵ<180)),"NW",
-#IF(AND(AND(Jx>0,Jy>0),AND(Ɵ>0,Ɵ<90)),"SW",
-#IF(AND(AND(Jx<0,Jy>0),AND(Ɵ>0,Ɵ<90)),"SE",
-#IF(OR(Ɵ=0,Ɵ=360),"E",
-#IF(Ɵ=90,"N",
-#IF(Ɵ=180,"W",
-#IF(Ɵ=270,"S","FALSE"))))))))
-
-
-
+##' 
+##' @return The value return to the direction of receptor point to the source location
+##' 
+##' @author Zul Fadhli & Izhar Abadi
+##' 
+##' @examples 
+##' 
+##' #demo
+##' bearing(sourceInput = sourceInput, receptorInput = receptorInput, windInput = windInput, sourceActivity = "primaryCrusher")
+##' 
 bearing <- function(sourceInput, receptorInput, sourceActivity){
   
   sourceInput <- sourceInput

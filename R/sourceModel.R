@@ -1,5 +1,35 @@
+##' Application of Source model for dust deposited rate estimation to all receptor and source locations
+##' Function for Source Model 
+##'
+##' \code{sourceModel} Estimation of Dust Deposition Model (EDDM) established to estimate dust deposited rate at receptor
+##' 
+##' \code{sourceModel} require the source and receptor location in Easting and Northing format.
+##' The \code{sourceActivity} for this model is the type of material processing activity in the quarry or
+##' if the \code{sourceInput} is the quarries location, the \code{sourceActivity} is the name of the quarries.
+##' 
+##' @param sourceInput A data frame containing \code{sourceActivity} is a name for the pointsource, \code{type} (the type of material processing),
+##' \code{x} for Easting, \code{y} for Northing and \code{z} for elevation height of the location.
+##' 
+##' @param receptorInput A data frame containing \code{receptor} the name/label for receptor point,
+##' \code{x} for Easting, \code{y} for Northing and \code{z} for elevation height of the location.
+##' 
+##' @param windInput A data frame containing \code{ws} for windspeed (m/s) and \code{wd} for wind direction
+##' 
+##' @param sourceActivity The pointsource name such as \sQuote{primaryCrusher} or \sQuote{point A} which is
+##' according to the \code{souceInput} \code{sourceActivity}.
+##' 
+##' 
 ##' @export
-#calculate all the results
+##' 
+##' @return The results will be the estimation of dust deposited rate at all the receptors from all point source.
+##' The unit measurement for dust deposited rate is ug/m2/month.
+##' 
+##' @author Zul Fadhli & Izhar Abadi
+##' 
+##' @examples 
+##' 
+##' #demo
+##' sourceModel((quarryInput = quarryInput, sourceInput = sourceInput, receptorInput = receptorInput, windInput = windInput, particleSize = "tsp")
 
 sourceModel <- function(quarryInput = quarryInput,
                         sourceInput = sourceInput,

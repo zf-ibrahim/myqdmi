@@ -1,4 +1,3 @@
-##' @export
 #Distance
 
 #x = SQRT((PcoorX-RcoorX)^2+(PcoorY-RcoorY)^2+(PcoorZ-RcoorZ)^2)
@@ -7,6 +6,22 @@
 #library(geosphere)
 #distm (c(lon1, lat1), c(lon2, lat2), fun = distHaversine)
 
+##' Distance
+##'
+##' @param sourceInput A data frame containing \code{sourceActivity} is a name for the pointsource, \code{type} (the type of material processing),
+##' \code{x} for Easting, \code{y} for Northing and \code{z} for elevation height of the location.
+##' 
+##' @param receptorInput A data frame containing \code{receptor} the name/label for receptor point,
+##' \code{x} for Easting, \code{y} for Northing and \code{z} for elevation height of the location.
+##' 
+##' @param sourceActivity 
+##'
+##' @return distance between receptor location to source location
+##' @export
+##'
+##' @examples
+##' #demo
+##' distance(sourceInput, receptorInput, sourceActivity)
 distance <- function(sourceInput, receptorInput, sourceActivity ){
 
   sourceInput <- sourceInput
