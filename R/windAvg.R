@@ -1,12 +1,27 @@
+##' Mean of Wind speed by wind stability group
+##' 
+##' An utility function for MyQDMi apps
+##' 
+##' @param windInput A data frame containing \code{ws} for windspeed (m/s) and 
+##' \code{wd} for wind direction
+##' 
+##' @param stability Six category stability which is 'A', 'B', 'C', 'D', 'E', and 'F'.
+##' 
 ##' @export
-#wind speed average for stablities and wind wind classes 
-#Malaysian quarry dust monitoring artificial intelligence android apps (MyQDMi)
+##' 
+##' @author Zul Fadhli & Dr. Izhar Abadi
+##' 
+##' @example 
+##' #demo
+##' windAvg(windInput, stability = "F")
+
 
 
 windAvg <- function(windInput, stability = "F"){
   
   
-  
+  #wind speed average for stablities and wind wind classes 
+  #Malaysian quarry dust monitoring artificial intelligence android apps (MyQDMi)  
   
   
   storage.vector <- rep(NA,nrow(windInput))

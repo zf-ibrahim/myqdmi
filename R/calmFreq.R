@@ -1,9 +1,23 @@
-##' @export
-#calmFreq
 
 #wind Frequency PTG(MS excel)
 #Malaysian quarry dust monitoring artificial intelligence android apps (MyQDMi)
 
+
+#' calmFreq
+#' 
+#' Calm condition frequency count.
+#'
+#' @param windInput A data frame containing \code{ws} for windspeed (m/s) and \code{wd} for wind direction
+#' @param calm calm condition when wind speed below than 0.52 m/s. As default \code{calm} = \code{TRUE}. \code{FALSE} to exclude the calm condition.
+#'
+#' @return Total of calm condition in the dataset
+#' @export
+#' 
+#' @author Zul Fadhli & Dr Izhar Abadi
+#'
+#' @examples
+#' #demo
+#' calmFreq(windInput, calm =TRUE)
 
 calmFreq <- function(windInput, calm =TRUE){
 

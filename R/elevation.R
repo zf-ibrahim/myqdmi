@@ -1,5 +1,17 @@
-##' @export
+##' Elevation
+##' 
+##' To estimate elevation using Shuttle Radar Topography Mission digital elevation model. (SRTM3 data)
+##' 
+##' @param location A data frame must contain column of "lat" for latitude and "long" for longitude. Value format in decimal.
 ##'
+##' @export
+##' 
+##' @author Zul Fadhli & Dr Izhar Abadi
+##' 
+##' @example 
+##' #demo
+##' elevation(location = receptorInput) 
+
 
 elevation <- function(location = receptorInput){
 

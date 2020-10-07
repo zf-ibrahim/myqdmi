@@ -1,6 +1,6 @@
 ##' Granite Receptor Model
 ##' multivariate equation for granite model
-##' 2.98 - 0.0123(AWS) - 0.00073(DSR) + 0.0006((ABA + TDH)/2) + 0.0089((NWB+WB)/2)
+##' 
 ##' 
 ##' \code{receptorModel.granite} Multimaviate model established to estimate dust deposited rate at receptor
 ##' 
@@ -24,7 +24,7 @@
 ##' @return The results will be the estimation of dust deposited rate at all the receptors from a pointsource.
 ##' The unit measurement for dust deposited rate is ug/m2/month.
 ##' 
-##' @author Zul Fadhli & Izhar Abadi
+##' @author Zul Fadhli & Dr. Izhar Abadi
 ##' 
 ##' @examples 
 ##' 
@@ -353,6 +353,9 @@ tdh <- quarryInput$drillhole
 aba <- quarryInput$areaBlasted
 
 dsr <- distance(sourceInput, receptorInput, sourceActivity = sourceName)
+
+#multivariate model:
+#2.98 - 0.0123(AWS) - 0.00073(DSR) + 0.0006((ABA + TDH)/2) + 0.0089((NWB+WB)/2)
 
 2.98 - (0.0123*(aws)) - (0.00073*(dsr)) + (0.0006*((aba + tdh)/2)) + (0.0089*((nwb+pwb)/2))
 }

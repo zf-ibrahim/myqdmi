@@ -22,7 +22,7 @@
 ##' @return The results will be the estimation of dust deposited rate at all the receptors from a pointsource.
 ##' The unit measurement for dust deposited rate is ug/m2/month.
 ##' 
-##' @author Zul Fadhli & Izhar Abadi
+##' @author Zul Fadhli & Dr. Izhar Abadi
 ##' 
 ##' @examples 
 ##' 

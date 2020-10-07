@@ -1,5 +1,5 @@
-##' BRT model for DDR
-##' Function for Limestone Receptor Model
+##' Artificial Intelligent modeling for estimating dust deposited rate
+##' 
 ##'
 ##' \code{model.ai} A gradient boosting model (GBM) established to estimate dust deposited rate at receptor
 ##' 
@@ -23,7 +23,7 @@
 ##' @return The results will be the estimation of dust deposited rate at all the receptors from a pointsource.
 ##' The unit measurement for dust deposited rate is ug/m2/month.
 ##' 
-##' @author Zul Fadhli & Izhar Abadi
+##' @author Zul Fadhli & Dr Izhar Abadi
 ##' 
 ##' @examples 
 ##' 
@@ -44,7 +44,7 @@ dist <- distance(sourceInput, receptorInput, sourceActivity = sourceActivity)
 
 pred <- data.frame(dist = dist)
 
-a <- quarryInput$quarryProduction
+pred$QProdH <- quarryInput$quarryProduction
 
 pred$BlastingFreq <- quarryInput$blastingFreq
 
@@ -72,6 +72,7 @@ pred$AveWndSpeedStabA <- windAvg(windInput, stability = "A")
 pred$Highdiff <- receptorInput$z - sourceInput$z
 
 pred$wcount_Calm <- calmFreq(windInput, calm = T)
+
 
 
 windFreq2 <- function(windInput, sourceInput, receptorInput, sourceActivity = "primaryCrusher"){
@@ -146,7 +147,7 @@ pred$PercentWindBlowToReseptor <- windFreq2(windInput, sourceInput, receptorInpu
 
 
 
-predict(DDR.gbm, pred, n.trees = 1384)
+predict(DDR.gbm, pred, n.trees = 478)
 
 
 }

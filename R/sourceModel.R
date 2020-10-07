@@ -1,5 +1,5 @@
 ##' Application of Source model for dust deposited rate estimation to all receptor and source locations
-##' Function for Source Model 
+##' 
 ##'
 ##' \code{sourceModel} Estimation of Dust Deposition Model (EDDM) established to estimate dust deposited rate at receptor
 ##' 
@@ -24,7 +24,7 @@
 ##' @return The results will be the estimation of dust deposited rate at all the receptors from all point source.
 ##' The unit measurement for dust deposited rate is ug/m2/month.
 ##' 
-##' @author Zul Fadhli & Izhar Abadi
+##' @author Zul Fadhli & Dr. Izhar Abadi
 ##' 
 ##' @examples 
 ##' 

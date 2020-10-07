@@ -1,4 +1,6 @@
 #' Blasting
+#' 
+#' A function to estimate dust generation from blasting activity.
 #'
 #' @param quarryInput data frame containing column names: quarryProduction - quarry production tonne per hour,
 #' blastingFreq - blasting frequency per month, areaBlasted - area blasted (km. sq), blasthole - average of depth of blast hole (m), drillhole - drilling hole per month,
@@ -19,6 +21,8 @@
 #'
 #' @return A numeric value of estimation dust generation/\code{dustGenerated} for blasting activity.
 #' @export
+#' 
+#' @author Zul Fadhli & Dr Izhar Abadi
 #'
 #' @examples
 #' #demo

@@ -1,7 +1,33 @@
+##' Ground level wind speed at point source
+##' 
+##' A function to estimate wind speed at ground level of selected point source
+##' 
+##' 
+##' @param sourceInput A data frame containing \code{sourceActivity} is a name for the pointsource, \code{type} (the type of material processing),
+##' \code{x} for Easting, \code{y} for Northing and \code{z} for elevation height of the location.
+##' 
+##' @param windInput A data frame containing \code{ws} for windspeed (m/s) and 
+##' \code{wd} for wind direction
+##'
+##' @param sourceActivity Select the point source labeled in the \code{sourceInput} dataframe. For example; 
+##' The pointsource name such as \sQuote{primaryCrusher} or \sQuote{point A} which is according to the \code{souceInput} \code{sourceActivity}.
+##' 
+##' @param AnemometerHeight Height of anemometer installation from sea level.
+##' 
+##' @param stability Six category stability which is 'A', 'B', 'C', 'D', 'E', and 'F'.
+##' 
+##' @param windClass Five wind band which is > 5.67 m/s, > 3.61 m/s, > 2.07 m/s, 0.52 and < 0.51
+##' characterized as 'class1', 'class2', 'class3', 'class4' and 'calm' respectively
+##' 
 ##' @export
-#halaju angin pada ketinggian sesuatu punca
+##' 
+##' @author Zul Fadhli & Dr. Izhar Abadi
+##' 
+##' @example 
+##' #demo
+##' us <- function(sourceInput, windInput, sourceActivity = "primaryCrusher", AnemometerHeight = 2, stability = "A", windClass = "class1")
 
-#Us = Ua * (PcoorZ/Za)^p
+
 
 
 us <- function(sourceInput, windInput, sourceActivity = "primaryCrusher", AnemometerHeight = 2, stability = "A", windClass = "class1"){
@@ -65,7 +91,7 @@ us <- function(sourceInput, windInput, sourceActivity = "primaryCrusher", Anemom
   }
     if(is.nan(ua)) {ua <- 0}
 
-
+  #Us = Ua * (PcoorZ/Za)^p
 
   ua*(sourceInput[sourceInput$sourceActivity == sourceActivity,"z"]/AnemometerHeight)^stability
 

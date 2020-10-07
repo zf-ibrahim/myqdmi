@@ -1,9 +1,27 @@
+##' Wind frequency by wind stability group, wind class, and wind direction
+##' 
+##' An utility function for MyQDMi apps
+##' 
+##' @param windInput 
+##' @param stability Six category stability which is 'A', 'B', 'C', 'D', 'E', and 'F'.
+##' @param windClass Five wind band which is > 5.67 m/s, > 3.61 m/s, > 2.07 m/s, 0.52 and < 0.51
+##' characterized as 'class1', 'class2', 'class3', 'class4' and 'calm' respectively
+##' @param windDirection Wind direction category 'N', 'NE', 'E', 'SE', 'SW', 'W' and 'NW'
+##' 
 ##' @export
-#wind Frequency PTG(MS excel)
-#Malaysian quarry dust monitoring artificial intelligence android apps (MyQDMi)
+##' 
+##' @author Zul fadhli & Dr. Izhar Abadi
+##' 
+##' @example 
+##' #demo
+##' windFreq(windInput, stability = "F", windClass = "class1", windDirection = "NE")
+
 
 
 windFreq <- function(windInput, stability = "F", windClass = "class1", windDirection = "NE"){
+  
+  #Origin from - wind Frequency pivoted table grouping PTG(MS excel)
+  #Malaysian quarry dust monitoring artificial intelligence android apps (MyQDMi)
 
 
   windBand <- ifelse(windInput$ws > 8.75,
