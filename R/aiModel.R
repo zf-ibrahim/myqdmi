@@ -147,7 +147,7 @@ pred$PercentWindBlowToReseptor <- windFreq2(windInput, sourceInput, receptorInpu
 
 
 
-predict(DDR.gbm, pred, n.trees = 478)
+predict(DDR.gbm, pred, n.trees = 1384)
 
 
 }
